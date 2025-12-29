@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicola Peter Unango | IT Student Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Styling */
+        :root {
+            --primary-color: #0056b3; /* University Blue */
+            --secondary-color: #2c3e50;
+            --text-color: #333;
+            --bg-color: #f4f7f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 1rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            
+            width: 200px;
+            height: 120px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 400;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 20px; }
+
+        /* Sections */
+        section { padding: 80px 10%; }
+        h2 { text-align: center; margin-bottom: 40px; color: var(--primary-color); }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        /* Skill Cards */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover { transform: translateY(-5px); }
+
+        /* Contact Form */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--secondary-color);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo"> <img src="logo.PNG" alt="Nicola's Profile Image" style="width:100%; border-radius: 10px;"></div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <h1>Nicola Peter Unango</h1>
+        <p>Information Technology Student | University of Juba</p>
+        <button onclick="scrollToContact()" style="width: auto;">Hire Me</button>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-grid">
+            <div>
+                <img src="nicola1998.JPEG" alt="Nicola's Profile Image" style="width:100%; border-radius: 10px;">
+            </div>
+            <div>
+                <p>Hello! I am <strong>Nicola Peter Unango</strong>, a dedicated IT student at the <strong>University of Juba</strong>. I am passionate about leveraging technology to solve real-world problems. My academic journey focuses on software development, networking, and database management.</p>
+                <br>
+                <p>I am constantly learning new frameworks and tools to stay ahead in the rapidly evolving digital landscape of South Sudan and beyond.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" style="background-color: #e9ecef;">
+        <h2>Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card"><h3>Web Development</h3></div>
+            <div class="skill-card"><h3>Software Development</h3></div>
+            <div class="skill-card"><h3>Cloude computing</h3></div>
+            <div class="skill-card"><h3>Computer Maintainance</h3></div>
+            <div class="skill-card"><h3>problem solving</h3></div>
+            <div class="skill-card"><h3>Networking</h3></div>
+        </div>
+    </section>
+
+   <section id="contact">
+    <h2>Get In Touch</h2>
+    <form id="contact-form" action="https://formspree.io/f/mpqzkyky" method="POST">
+        <input type="text" name="full_name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+    <footer>
+        <p>&copy; 2026 Nicola Peter Unango | University of Juba IT Dept.</p>
+    </footer>
+
+    <script>
+        
+        const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', async function(e) {
+    e.preventDefault(); // Stop page from refreshing
+    
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    });
+
+    if (response.ok) {
+        alert('Success! Nicola has received your message.');
+        form.reset();
+    } else {
+        alert('Oops! There was a problem submitting your form.');
+    }
+});
+    </script>
+</body>
+</html>
